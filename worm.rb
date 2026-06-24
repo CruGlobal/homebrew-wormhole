@@ -5,21 +5,21 @@
 class Worm < Formula
   desc "Wormhole tunnel agent — expose a local port over a shared HTTPS URL"
   homepage "https://github.com/CruGlobal/wormhole"
-  version "0.1.0-rc.1"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0-rc.1/worm_0.1.0-rc.1_darwin_amd64.tar.gz"
-      sha256 "ec8fd42c1d76b9934f7878e22d9ac591920cef01cd3596c7d0ed4148ea4355bf"
+      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0/worm_0.1.0_darwin_amd64.tar.gz"
+      sha256 "7ce5ef600651b21d8d456c0937e19ed1eeed3783fa4264fd5fd768e1bc61ce05"
 
       define_method(:install) do
         bin.install "worm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0-rc.1/worm_0.1.0-rc.1_darwin_arm64.tar.gz"
-      sha256 "55c8c6ad3c22cb63599ac044c43686b4e51386e1700a1cf535f4ca642732201d"
+      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0/worm_0.1.0_darwin_arm64.tar.gz"
+      sha256 "d7ec170930b4d6f95383e4e8a5047377f5175998e016b087c92d6875c7956fd9"
 
       define_method(:install) do
         bin.install "worm"
@@ -29,15 +29,15 @@ class Worm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0-rc.1/worm_0.1.0-rc.1_linux_amd64.tar.gz"
-      sha256 "974ea22bdfeb2062467cc68ab1475b7f067ddbd0e2d6855068da408f42cf0634"
+      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0/worm_0.1.0_linux_amd64.tar.gz"
+      sha256 "da5d92c299154e6d09fc0340f8d95c3f6ab279774ae645124330484538959d92"
       define_method(:install) do
         bin.install "worm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0-rc.1/worm_0.1.0-rc.1_linux_arm64.tar.gz"
-      sha256 "775594cf1cbe3096811724104941340e8ea37cfe921b2da9328f06330bc481e6"
+      url "https://github.com/CruGlobal/worm/releases/download/v0.1.0/worm_0.1.0_linux_arm64.tar.gz"
+      sha256 "b33610e09d5fb65635afed556234bdf9d048b7d17b227da499ebbc888fab0faa"
       define_method(:install) do
         bin.install "worm"
       end
